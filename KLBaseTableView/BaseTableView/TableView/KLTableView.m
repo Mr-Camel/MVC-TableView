@@ -11,6 +11,8 @@
 #import "MJRefresh.h"
 #import "MJRefreshStateHeader.h"
 
+NSInteger const DefaultPreloadInteger = -1;
+
 @implementation KLTableView
 
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
@@ -20,6 +22,9 @@
         self.delegate = self;
         self.isNeedRefreshFooter = NO;
         self.isNeedRefreshHeader = NO;
+        self.isNeedPreload = NO;
+        self.preloadRow = 5;
+        self.preloadSection = DefaultPreloadInteger;
     }
     return self;
 }
@@ -110,5 +115,33 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self needBeginRefreshingWithIndexPath:indexPath]) {//预加载
+        [self.mj_footer beginRefreshing];
+    }
+    if (self.klDelegate && [self.klDelegate respondsToSelector:@selector(tableViewWillDisplayCell:atIndexPath:withItem:)]) {//如果执行了自定义协议中的方法
+        [self.klDelegate tableViewWillDisplayCell:cell atIndexPath:indexPath withItem:[(id<KLTableViewDataSource>)self.dataSource tableView:tableView itemForRowAtIndexPath:indexPath]];
+    }else if (self.klDelegate && [self.klDelegate respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]) {//如果执行了系统协议中的方法
+        [self.klDelegate tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    }
+}
 
+- (BOOL)needBeginRefreshingWithIndexPath:(NSIndexPath *)indexPath {
+    if (!self.isNeedPreload) {
+        return self.isNeedPreload;
+    }
+    NSInteger section = [(id<KLTableViewDataSource>)self.dataSource numberOfSectionsInTableView:self];
+    if (self.preloadSection != DefaultPreloadInteger) {//如果设置为分区预加载模式
+        return (indexPath.section == (section - self.preloadSection));
+    }else {
+        BOOL isLastSection = (indexPath.section == (section - 1));//是否是最后一区
+        BOOL isBackRow = (indexPath.row == [(id<KLTableViewDataSource>)self.dataSource tableView:self numberOfRowsInSection:indexPath.section] - self.preloadRow);
+        return isLastSection && isBackRow;
+    }
+}
+
+- (void)setPreloadRow:(NSInteger)preloadRow {
+    _preloadRow = preloadRow;
+    _preloadSection = DefaultPreloadInteger;
+}
 @end
