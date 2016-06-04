@@ -71,6 +71,9 @@
         cell = [[NSClassFromString(item.cellClassName) alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:item.cellClassName];
     }
     [cell configWithModel:item.model];
+    if (self.cellCallback) {
+        cell.cellBlock = self.cellCallback;
+    }
     return cell;
 }
 #pragma mark - 区头区尾标题

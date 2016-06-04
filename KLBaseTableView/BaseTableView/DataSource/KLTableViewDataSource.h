@@ -20,6 +20,8 @@
 
 @interface KLTableViewDataSource : NSObject <KLTableViewDataSource>
 
+@property (nonatomic, copy) void (^cellCallback)(UITableViewCell *cell ,NSString *callbackID);
+
 /**
  * 二维数组 , 每个元素都是一个sectionOBJ对象 , 对象中有一个items数组
  */

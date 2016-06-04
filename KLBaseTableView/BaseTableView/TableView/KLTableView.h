@@ -15,6 +15,11 @@
 
 @optional
 /**
+ *  @brief  cell的回调
+ *  @param  callbackID  回调的类型 , 需自定义 , 如cell中有多个点击事件(如头像/关注/点赞等) , 可以用此参数来进行判断
+ */
+- (void)cellCallbackWithRowItem:(KLTableViewRowItem *)item callbackID:(NSString *)callbackID atIndexPath:(NSIndexPath *)indexPath;
+/**
  * 下拉刷新回调
  */
 - (void)refreshingHeader;

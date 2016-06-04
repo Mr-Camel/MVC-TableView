@@ -11,6 +11,8 @@
 
 @interface UITableViewCell (ConfigModel)
 
+@property (nonatomic, copy) void (^cellBlock)(UITableViewCell *blockCell ,NSString *callbackID);
+
 /**
  * 由子类重写此方法
  */

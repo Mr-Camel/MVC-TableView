@@ -72,6 +72,12 @@
 		D0EA650D1CF2A37500E93EDC /* KLRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA65031CF2A37500E93EDC /* KLRefreshTableViewController.m */; };
 		D0EA65101CF2A3AC00E93EDC /* SubPlainDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA650F1CF2A3AC00E93EDC /* SubPlainDataSource.m */; };
 		D0EA65131CF2A3BD00E93EDC /* SubGroupDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA65121CF2A3BD00E93EDC /* SubGroupDataSource.m */; };
+		D0F5D6271D02CE630014C0E9 /* CellCallbackTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5D6261D02CE630014C0E9 /* CellCallbackTVController.m */; };
+		D0F5D62A1D02D4850014C0E9 /* SubCallbackDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5D6291D02D4850014C0E9 /* SubCallbackDataSource.m */; };
+		D0F5D62D1D02D5990014C0E9 /* CallbackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5D62C1D02D5990014C0E9 /* CallbackModel.m */; };
+		D0F5D6311D02D60B0014C0E9 /* CallbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5D62F1D02D60B0014C0E9 /* CallbackCell.m */; };
+		D0F5D6321D02D60B0014C0E9 /* CallbackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F5D6301D02D60B0014C0E9 /* CallbackCell.xib */; };
+		D0F5D6361D02D6AE0014C0E9 /* yellow.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D0F5D6351D02D6AE0014C0E9 /* yellow.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +208,16 @@
 		D0EA650F1CF2A3AC00E93EDC /* SubPlainDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubPlainDataSource.m; sourceTree = "<group>"; };
 		D0EA65111CF2A3BD00E93EDC /* SubGroupDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGroupDataSource.h; sourceTree = "<group>"; };
 		D0EA65121CF2A3BD00E93EDC /* SubGroupDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGroupDataSource.m; sourceTree = "<group>"; };
+		D0F5D6251D02CE630014C0E9 /* CellCallbackTVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellCallbackTVController.h; sourceTree = "<group>"; };
+		D0F5D6261D02CE630014C0E9 /* CellCallbackTVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellCallbackTVController.m; sourceTree = "<group>"; };
+		D0F5D6281D02D4850014C0E9 /* SubCallbackDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCallbackDataSource.h; sourceTree = "<group>"; };
+		D0F5D6291D02D4850014C0E9 /* SubCallbackDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCallbackDataSource.m; sourceTree = "<group>"; };
+		D0F5D62B1D02D5990014C0E9 /* CallbackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallbackModel.h; sourceTree = "<group>"; };
+		D0F5D62C1D02D5990014C0E9 /* CallbackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallbackModel.m; sourceTree = "<group>"; };
+		D0F5D62E1D02D60B0014C0E9 /* CallbackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallbackCell.h; sourceTree = "<group>"; };
+		D0F5D62F1D02D60B0014C0E9 /* CallbackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallbackCell.m; sourceTree = "<group>"; };
+		D0F5D6301D02D60B0014C0E9 /* CallbackCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CallbackCell.xib; sourceTree = "<group>"; };
+		D0F5D6351D02D6AE0014C0E9 /* yellow.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yellow.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,8 +258,10 @@
 				D0DEA75C1CEEAAF50036C7BA /* AppDelegate.m */,
 				D0EA64BD1CF2A24A00E93EDC /* 动态页面(含上拉与下拉) */,
 				D0EA64CE1CF2A24A00E93EDC /* 静态页面(不含上拉与下拉) */,
+				D0F5D6201D02CDDA0014C0E9 /* Cell的回调 */,
 				D0DEA7611CEEAAF50036C7BA /* Main.storyboard */,
 				D0DEA7641CEEAAF50036C7BA /* Assets.xcassets */,
+				D0F5D6351D02D6AE0014C0E9 /* yellow.jpeg */,
 				D0DEA7661CEEAAF50036C7BA /* LaunchScreen.storyboard */,
 				D0DEA7691CEEAAF50036C7BA /* Info.plist */,
 				D0DEA7581CEEAAF50036C7BA /* Supporting Files */,
@@ -588,6 +606,54 @@
 			path = TableViewController;
 			sourceTree = "<group>";
 		};
+		D0F5D6201D02CDDA0014C0E9 /* Cell的回调 */ = {
+			isa = PBXGroup;
+			children = (
+				D0F5D6211D02CE0B0014C0E9 /* Controller */,
+				D0F5D6221D02CE0B0014C0E9 /* DataSource */,
+				D0F5D6231D02CE0B0014C0E9 /* Model */,
+				D0F5D6241D02CE0B0014C0E9 /* View */,
+			);
+			path = "Cell的回调";
+			sourceTree = "<group>";
+		};
+		D0F5D6211D02CE0B0014C0E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0F5D6251D02CE630014C0E9 /* CellCallbackTVController.h */,
+				D0F5D6261D02CE630014C0E9 /* CellCallbackTVController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0F5D6221D02CE0B0014C0E9 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D0F5D6281D02D4850014C0E9 /* SubCallbackDataSource.h */,
+				D0F5D6291D02D4850014C0E9 /* SubCallbackDataSource.m */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		D0F5D6231D02CE0B0014C0E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0F5D62B1D02D5990014C0E9 /* CallbackModel.h */,
+				D0F5D62C1D02D5990014C0E9 /* CallbackModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0F5D6241D02CE0B0014C0E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0F5D62E1D02D60B0014C0E9 /* CallbackCell.h */,
+				D0F5D62F1D02D60B0014C0E9 /* CallbackCell.m */,
+				D0F5D6301D02D60B0014C0E9 /* CallbackCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -651,6 +717,8 @@
 				D0E6F2CA1CF0038C004DC01E /* MJRefresh.bundle in Resources */,
 				D0EA64E41CF2A24A00E93EDC /* SubTableViewCell.xib in Resources */,
 				D0EA64DE1CF2A24A00E93EDC /* SubRefreshTwoTableViewCell.xib in Resources */,
+				D0F5D6361D02D6AE0014C0E9 /* yellow.jpeg in Resources */,
+				D0F5D6321D02D60B0014C0E9 /* CallbackCell.xib in Resources */,
 				D0DEA7631CEEAAF50036C7BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +742,7 @@
 				D0EA65091CF2A37500E93EDC /* KLHttpManager.m in Sources */,
 				D0E6F2741CEFFE1B004DC01E /* MJProperty.m in Sources */,
 				D0E6F2781CEFFE1B004DC01E /* NSObject+MJCoding.m in Sources */,
+				D0F5D6311D02D60B0014C0E9 /* CallbackCell.m in Sources */,
 				D0E6F2731CEFFE1B004DC01E /* MJFoundation.m in Sources */,
 				D0EA64E21CF2A24A00E93EDC /* SubPlainViewController.m in Sources */,
 				D0EA65051CF2A37500E93EDC /* UITableViewCell+ConfigModel.m in Sources */,
@@ -682,9 +751,11 @@
 				D0E6F2DE1CF004A0004DC01E /* AFNetworkReachabilityManager.m in Sources */,
 				D0E6F2CE1CF0038C004DC01E /* UIView+MJExtension.m in Sources */,
 				D0E6F2BE1CF0038C004DC01E /* MJRefreshComponent.m in Sources */,
+				D0F5D62A1D02D4850014C0E9 /* SubCallbackDataSource.m in Sources */,
 				D0EA650C1CF2A37500E93EDC /* KLBaseTableViewController.m in Sources */,
 				D0EA64DF1CF2A24A00E93EDC /* SubRefreshOneTableViewCell.m in Sources */,
 				D0E6F2E51CF004DC004DC01E /* AFAppDotNetAPIClient.m in Sources */,
+				D0F5D62D1D02D5990014C0E9 /* CallbackModel.m in Sources */,
 				D0E6F2C21CF0038C004DC01E /* MJRefreshAutoNormalFooter.m in Sources */,
 				D0E6F2791CEFFE1B004DC01E /* NSObject+MJKeyValue.m in Sources */,
 				D0E6F2761CEFFE1B004DC01E /* MJPropertyType.m in Sources */,
@@ -704,6 +775,7 @@
 				D0E6F2CC1CF0038C004DC01E /* UIScrollView+MJExtension.m in Sources */,
 				D0E6F2CD1CF0038C004DC01E /* UIScrollView+MJRefresh.m in Sources */,
 				D0DEA75D1CEEAAF50036C7BA /* AppDelegate.m in Sources */,
+				D0F5D6271D02CE630014C0E9 /* CellCallbackTVController.m in Sources */,
 				D0E6F2C11CF0038C004DC01E /* MJRefreshAutoGifFooter.m in Sources */,
 				D0EA65081CF2A37500E93EDC /* KLTableViewDataSource.m in Sources */,
 				D0E6F2771CEFFE1B004DC01E /* NSObject+MJClass.m in Sources */,
