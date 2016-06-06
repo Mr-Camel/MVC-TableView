@@ -28,6 +28,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.sectionFooterHeight = 8;
     [self.tableView startRefreshHeader];
 }
 - (NSArray *)nibCellsName {

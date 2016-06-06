@@ -99,22 +99,6 @@ NSInteger const DefaultPreloadInteger = -1;
     }
     return item.cellHeight;
 }
-#pragma mark - 分区头高度
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return [(id<KLTableViewDataSource>)self.dataSource tableView:tableView objectOfSection:section].sectionHeaderHeight;
-}
-#pragma mark - 分区尾高度
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return [(id<KLTableViewDataSource>)self.dataSource tableView:tableView objectOfSection:section].sectionFooterHeight;
-}
-#pragma mark - 分区头视图
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return [(id<KLTableViewDataSource>)self.dataSource tableView:tableView objectOfSection:section].sectionHeaderView;
-}
-#pragma mark - 分区尾视图
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    return [(id<KLTableViewDataSource>)self.dataSource tableView:tableView objectOfSection:section].sectionFooterView;
-}
 
 #pragma mark - 将点击事件转发给外部
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

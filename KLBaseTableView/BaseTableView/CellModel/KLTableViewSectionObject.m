@@ -13,12 +13,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _sectionHeaderHeight = 0;
-        _sectionFooterHeight = 0;
         _sectionFooterTitle = nil;
         _sectionHeaderTitle = nil;
-        _sectionHeaderView = nil;
-        _sectionFooterView = nil;
         _items = [NSMutableArray array];
     }
     return self;
@@ -31,32 +27,4 @@
     return self;
 }
 
-- (void)setSectionFooterTitle:(NSString *)sectionFooterTitle {
-    _sectionFooterTitle = sectionFooterTitle;
-    if (sectionFooterTitle != nil) {
-        self.sectionFooterView = nil;
-        self.sectionFooterHeight = 24;
-    }
-}
-- (void)setSectionHeaderTitle:(NSString *)sectionHeaderTitle {
-    _sectionHeaderTitle = sectionHeaderTitle;
-    if (sectionHeaderTitle != nil) {
-        self.sectionHeaderView = nil;
-        self.sectionHeaderHeight = 24;
-    }
-}
-- (void)setSectionHeaderView:(UIView *)sectionHeaderView {
-    _sectionHeaderView = sectionHeaderView;
-    if (sectionHeaderView != nil) {
-        self.sectionHeaderTitle = nil;
-    }
-    self.sectionHeaderHeight = CGRectGetHeight(sectionHeaderView.frame);
-}
-- (void)setSectionFooterView:(UIView *)sectionFooterView {
-    _sectionFooterView = sectionFooterView;
-    if (sectionFooterView) {
-        self.sectionFooterTitle = nil;
-    }
-    self.sectionFooterHeight = CGRectGetHeight(sectionFooterView.frame);
-}
 @end

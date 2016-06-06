@@ -17,29 +17,13 @@
 @interface KLTableViewSectionObject : NSObject
 
 /**
- *  分区头标题 , 默认为空 , 与分区头视图不可同时存在
+ *  分区头标题 , 默认为空
  */
 @property (nonatomic, copy) NSString *sectionHeaderTitle;
 /**
- *  分区尾标题 , 默认为空 , 与分区尾视图不可同时存在
+ *  分区尾标题 , 默认为空
  */
 @property (nonatomic, copy) NSString *sectionFooterTitle;
-/**
- *  分区头高度 , 默认为0
- */
-@property (nonatomic, assign) CGFloat sectionHeaderHeight;
-/**
- *  分区尾高度 , 默认为0
- */
-@property (nonatomic, assign) CGFloat sectionFooterHeight;
-/**
- *  分区头视图 , 默认为空 , 与分区头标题不可同时存在
- */
-@property (nonatomic, strong) UIView *sectionHeaderView;
-/**
- *  分区尾视图 , 默认为空 , 与分区尾标题不可同时存在
- */
-@property (nonatomic, strong) UIView *sectionFooterView;
 
 
 @property (nonatomic, strong) NSMutableArray<KLTableViewRowItem *> *items;//每个对象都是tableviewitem , 即数据源

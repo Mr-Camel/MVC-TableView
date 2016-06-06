@@ -13,7 +13,6 @@
 
 - (void)refreshWithModel:(SubRefreshModel *)model {
     KLTableViewSectionObject *firstSection = [[KLTableViewSectionObject alloc] init];
-    firstSection.sectionFooterHeight = 8;
     for (SubRefreshOne *one in model.one) {
         KLTableViewRowItem *item = [[KLTableViewRowItem alloc] initWithCellClassName:@"SubRefreshOneTableViewCell" model:one];
         [firstSection.items addObject:item];
