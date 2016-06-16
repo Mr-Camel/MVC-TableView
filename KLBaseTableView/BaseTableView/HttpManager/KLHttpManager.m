@@ -20,12 +20,12 @@
         //这里的具体操作逻辑可以根据数据返回类型来操作
         
         //数据转模型
-        id item = aClass ? [aClass objectWithKeyValuesOrKeyValuesArray:responseObject] : responseObject;
-        
         if (!aClass) {//没有传入对象类型,直接返回数据
-            block(item ,HttpManagerResultTypeSuccess);
+            block(responseObject ,HttpManagerResultTypeSuccess);
             return;
         }
+        id item = [responseObject isKindOfClass:[NSDictionary class]] ? [aClass mj_objectWithKeyValues:responseObject] : [aClass mj_objectArrayWithKeyValuesArray:responseObject];
+        
         if ([item isKindOfClass:[NSArray class]] && [item count] == 0) {//空数组
             block([NSArray array] ,HttpManagerResultTypeNoData);
             return;
