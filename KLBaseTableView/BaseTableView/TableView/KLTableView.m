@@ -37,7 +37,7 @@ NSInteger const DefaultPreloadInteger = -1;
 }
 - (void)configCellCallback {
     if ([self.klDelegate respondsToSelector:@selector(cellCallbackWithRowItem:callbackID:atIndexPath:)]) {
-        [(KLTableViewDataSource *)_klDataSource setCellCallback:^(UITableViewCell *cell, NSString *callbackID) {
+        [_klDataSource cellCallbackBlock:^(UITableViewCell *cell, NSString *callbackID) {
             NSIndexPath *indexPath = [self indexPathForCell:cell];
             KLTableViewRowItem *item = [_klDataSource tableView:self itemForRowAtIndexPath:indexPath];
             [self.klDelegate cellCallbackWithRowItem:item callbackID:callbackID atIndexPath:indexPath];

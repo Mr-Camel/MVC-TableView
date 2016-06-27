@@ -9,6 +9,12 @@
 #import "KLTableViewDataSource.h"
 #import "UITableViewCell+ConfigModel.h"
 
+@interface KLTableViewDataSource ()
+
+@property (nonatomic, copy) void (^cellCallback)(UITableViewCell *cell ,NSString *callbackID);
+
+@end
+
 @implementation KLTableViewDataSource
 
 #pragma mark - init
@@ -55,7 +61,9 @@
 - (KLTableViewSectionObject *)tableView:(UITableView *)tableView objectOfSection:(NSInteger)section {
     return (self.sections.count > section) ? self.sections[section] : nil;
 }
-
+- (void)cellCallbackBlock:(void (^)(UITableViewCell *, NSString *))cellCallback {
+    self.cellCallback = cellCallback;
+}
 #pragma mark - UITableViewDataSource(内部实现)
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.sections ? self.sections.count : 0;
